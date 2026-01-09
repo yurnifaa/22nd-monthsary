@@ -1,12 +1,10 @@
-# 👋 22nd Monthsary w/ her | Web-App
+# 👋 22nd Monthsary w/ Her | Web-App
 
 This is a personal portfolio built to showcase my journey as a developer into Full-Stack Development alongside my Computer Science studies as a 3rd year college student. This portfolio was designed to be more than just a resume; it's a demonstration of my technical capabilities when it comes to different technology stacks.
 
 ![Portfolio Screenshot](./public/webpage_screenshot.png)
 
-## 📖 Overview
-
-### 🔴 Live Demo ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/janadelrosario?style=plastic)
+## 🔴 Live Demo ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/janadelrosario?style=plastic)
 🔗 [forkarylle.vercel.app](https://janadelrosario.vercel.app)
 
 This website is deployed using Netlify, developed with JavaScript on the Next.js framework, and styled with React and Tailwind CSS. Building this allowed me to bridge the gap between creative design and complex fornt-end elements.
@@ -32,7 +30,7 @@ This website is deployed using Netlify, developed with JavaScript on the Next.js
 - A few selections of my favorite pictures we've shared throughotu the years.
 
 ## 🌐 Socials
-I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.<br>
 **Feel free to reach out through my social below!**
 
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)]([https://facebook.com/yurnifaa](https://www.facebook.com/yurnifaa)) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/yurnifaa) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:delrosariojana9@gmail.com) 
