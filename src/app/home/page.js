@@ -12,7 +12,7 @@ export default function Home() {
     },
     { 
       name: "Date", 
-      path: "/icons/calendar.png", 
+      path: "/date", 
       icon: "📅", 
       label: "January 11, 2026",
       color: "bg-radial from-[#e46cc0] to-[#160a13]/60"
