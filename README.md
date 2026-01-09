@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 👋 22nd Monthsary w/ her | Web-App
 
-## Getting Started
+This is a personal portfolio built to showcase my journey as a developer into Full-Stack Development alongside my Computer Science studies as a 3rd year college student. This portfolio was designed to be more than just a resume; it's a demonstration of my technical capabilities when it comes to different technology stacks.
 
-First, run the development server:
+![Portfolio Screenshot](./public/webpage_screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔴 Live Demo ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/janadelrosario?style=plastic)
+🔗 [forkarylle.vercel.app](https://janadelrosario.vercel.app)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This website is deployed using Netlify, developed with JavaScript on the Next.js framework, and styled with React and Tailwind CSS. Building this allowed me to bridge the gap between creative design and complex fornt-end elements.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛠️ Tech Stack
 
-## Learn More
+![Netlify](https://skillicons.dev/icons?i=netlify) ![TypeScript](https://skillicons.dev/icons?i=ts) ![Next JS](https://skillicons.dev/icons?i=nextjs) ![React](https://skillicons.dev/icons?i=react) ![TailwindCSS](https://skillicons.dev/icons?i=tailwind) ![Three js](https://skillicons.dev/icons?i=threejs)
 
-To learn more about Next.js, take a look at the following resources:
+## 🏗️ Website Structure
+▶️ 6-pin Password
+- Hint: The time our story started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+▶️ Home
+- Letter, Date, and Pictures.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+▶️ Letter
+- A simple yet meaningful display of my devotion.
 
-## Deploy on Vercel
+▶️ Date
+- A timeline UI of what I planned for our date on January 11, 2026.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+▶️ Pictures
+- A few selections of my favorite pictures we've shared throughotu the years.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Socials
+I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+**Feel free to reach out through my social below!**
+
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)]([https://facebook.com/yurnifaa](https://www.facebook.com/yurnifaa)) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/yurnifaa) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:delrosariojana9@gmail.com) 
