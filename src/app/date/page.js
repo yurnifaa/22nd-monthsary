@@ -22,22 +22,20 @@ const events = [
     title: "Lunch Break First!",
     activity: "Eat at a near by restaurant in PICC to recharge.", 
     icon: <IoFastFoodOutline className="h-6 w-6 text-white" />
-
-    
   },
-    { 
+  { 
     time: "03:00 PM", 
     title: "The Mind Museum",
     activity: "Enjoy the wonders of science and technology together in BGC.", 
     icon: <MdPsychology className="h-6 w-6 text-white" />
   },
-    { 
+  { 
     time: "06:00 PM", 
     title: "Marugame Udon",
     activity: "Before going home, let's share a warm bowl of udon!", 
     icon: <CiBowlNoodles className="h-6 w-6 text-white" />
   },
-      { 
+  { 
     time: "07:00 PM", 
     title: "The End!",
     activity: "We head back home with our hearts full and happy hehe xd.", 
@@ -47,7 +45,11 @@ const events = [
 
 export default function DateTimeline() {
   return (
-    <main className="min-h-screen w-full bg-transparent py-6 flex flex-col justify-center sm:py-12 font-serif">
+    // FIX IS HERE:
+    // 1. Changed 'py-6' to 'pt-6 pb-0'
+    // 2. Changed 'sm:py-12' to 'sm:pt-12 sm:pb-0'
+    // 3. Changed 'justify-center' to 'justify-between' (ensures footer pushes to bottom if content is short)
+    <main className="min-h-screen w-full bg-transparent pt-6 pb-0 sm:pt-12 sm:pb-0 flex flex-col justify-between font-serif">
       
       <div className="py-3 sm:max-w-5xl sm:mx-auto w-full px-2 sm:px-0">
         <h1 className="text-[80px] font-bold text-center text-white font-tangerine mb-12 text-shadow-lg">
@@ -76,7 +78,6 @@ export default function DateTimeline() {
                   </div>
                 </div>
 
-                {/* The Center Icon */}
                 <div className="rounded-full bg-pink-400 border-4 border-white w-10 h-10 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center shadow-md z-10">
                   {event.icon}
                 </div>
@@ -88,11 +89,15 @@ export default function DateTimeline() {
         </div>
       </div>
 
-      <div className="text-center mt-12">
-        <Link href="/home" className="text-white text-2xl font-tangerine hover:scale-110 transition-transform inline-block border-b border-transparent hover:border-white">
-          ← Back to Home
-        </Link>
-      </div>
+      <footer className="mt-15 w-full relative z-10">
+        <div className="bg-black mask-t-from-30% to-transparent w-full pt-16 pb-10 flex flex-col items-center justify-end">
+          <hr className="border-pink-300/30 mb-8 w-3/4 max-w-2xl mx-auto" />  
+          <Link href="/home" className="text-white text-[35px] font-tangerine hover:scale-110 transition-transform text-shadow-lg">
+            ← Back to Home
+          </Link>
+        </div>
+      </footer>
+
     </main>
   );
 }
