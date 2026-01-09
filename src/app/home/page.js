@@ -42,7 +42,7 @@ export default function Home() {
                 ${tab.color}
                 
                 scale-100 grayscale-0 z-0
-                group-hover:scale-[0.9]
+                group-hover:scale-[0.9] group-hover:grayscale-[0.6]
                 
                 hover:scale-110 hover:grayscale-0 hover:z-50 hover:shadow-2xl
               `}

@@ -135,3 +135,136 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* --- NOTEBOOK PAPER STYLES --- */
+.paper-container {
+  background-color: #fff;
+  background-image: linear-gradient(#f5f5f0 1.7rem, #ccc 1.8rem);
+  background-size: 100% 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.paper-container::before, 
+.paper-container::after {
+  content: ""; 
+  position: absolute; 
+  bottom: 12px; 
+  width: 40%; 
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.5);
+  z-index: -1; 
+  transition: all 0.3s ease;
+}
+
+.paper-container::before {
+  left: 10px; 
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+.paper-container::after {
+  right: 10px; 
+  transform: skew(5deg) rotate(5deg);
+}
+
+.paper-container:hover::before,
+.paper-container:hover::after {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* --- VINYL RECORD PLAYER STYLES --- */
+.vinyl-wrapper {
+  position: relative;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+.vinyl-container {
+  width: 120px;
+  height: 120px;
+  background-color: #fafaf9; /* Off-white case */
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid #fbcfe8; /* Pink border */
+}
+
+/* The Rotating Record */
+.plate-black {
+  width: 100px;
+  height: 100px;
+  background-color: #18181b;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  animation: vinyl-rotation 4s infinite linear;
+}
+
+@keyframes vinyl-rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+.plate-border {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border-top: 2px solid rgba(255,255,255,0.3);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.plate-white {
+  width: 45px;
+  height: 45px;
+  background-color: #fbcfe8;
+  border-radius: 50%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.plate-center {
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* The Gold Arm */
+.player-arm {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  rotate: -45deg;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.player-arm-circ {
+  width: 18px;
+  height: 18px;
+  background-color: #d4af37; /* Gold */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.player-arm-rect {
+  width: 6px;
+  height: 40px;
+  background-color: #d4af37; /* Gold */
+  margin-bottom: -6px;
+  border-radius: 4px;
+}
