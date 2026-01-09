@@ -1,65 +1,124 @@
-import Image from "next/image";
+"use client";
+import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
+export default function PinLock() {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [error, setError] = useState(false);
+  const inputRefs = useRef([]);
+  const router = useRouter();
+
+  // Focus the first input on load
+  useEffect(() => {
+    if (inputRefs.current[0]) {
+      inputRefs.current[0].focus();
+    }
+  }, []);
+
+  const handleChange = (index, value) => {
+    // Only allow numbers
+    if (!/^\d*$/.test(value)) return;
+
+    const newOtp = [...otp];
+    newOtp[index] = value.substring(value.length - 1); // Only take the last char
+    setOtp(newOtp);
+
+    // Move to next input if value is entered
+    if (value && index < 5 && inputRefs.current[index + 1]) {
+      inputRefs.current[index + 1].focus();
+    }
+    
+    // Reset error when typing
+    setError(false);
+  };
+
+  const handleKeyDown = (index, e) => {
+    // Move to previous input on backspace if current is empty
+    if (e.key === "Backspace" && !otp[index] && index > 0 && inputRefs.current[index - 1]) {
+      inputRefs.current[index - 1].focus();
+    }
+  };
+
+  const handleVerify = () => {
+    const code = otp.join("");
+    if (code === "031124") {
+      router.push("/home");
+    } else {
+      setError(true);
+      // Shake animation or clear inputs could go here
+    }
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen flex flex-col items-center justify-center bg-transparent font-serif p-4">
+      
+      {/* Main Card */}
+      <div className="[--shadow:rgba(60,64,67,0.3)_0_1px_2px_0,rgba(60,64,67,0.15)_0_2px_6px_2px] w-full max-w-md space-y-4">
+        <div className="flex flex-col items-center justify-center relative rounded-xl p-8 bg-white/90 backdrop-blur-sm [box-shadow:var(--shadow)] overflow-hidden border border-white">
+          
+          <h6 className="text-3xl font-bold text-gray-800 mb-2">Baby Verification xd</h6>
+          <p className="text-zinc-500 text-sm text-center mb-6 italic">
+            Enter the date our story began (MMDDYY)
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+          {/* 6-Digit Grid */}
+          <div className="w-full flex justify-center gap-2 mb-6">
+            {otp.map((digit, index) => (
+              <input
+                key={index}
+                ref={(el) => (inputRefs.current[index] = el)}
+                value={digit}
+                onChange={(e) => handleChange(index, e.target.value)}
+                onKeyDown={(e) => handleKeyDown(index, e)}
+                className={`
+                  w-10 h-12 sm:w-12 sm:h-14 
+                  text-2xl text-center font-bold text-gray-700 
+                  bg-white border rounded-md shadow-sm outline-none transition-all
+                  focus:ring-2 focus:ring-pink-300 focus:border-pink-400
+                  ${error ? "border-red-400 ring-2 ring-red-200" : "border-gray-200"}
+                `}
+                type="tel"
+                maxLength={1}
+                autoComplete="off"
+              />
+            ))}
+          </div>
+
+          {/* Verify Button */}
+          <button
+            onClick={handleVerify}
+            type="button"
+            className="mt-2 w-full px-4 py-3 bg-pink-400 hover:bg-pink-500 text-white font-medium tracking-wider rounded-md transition-colors duration-200 shadow-md"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Verify
+          </button>
+
+          {/* Error Message & Song */}
+          {error && (
+            <div className="mt-6 text-center">
+              <p className="text-pink-500 text-[22px] mb-3">That&apos;s not our date, bub...</p>
+              <div className="rounded-lg overflow-hidden shadow-lg mx-auto w-full max-w-120">
+                <iframe 
+                  style={{ borderRadius: "12px" }} 
+                  src="https://open.spotify.com/embed/track/0gEyKnHvgkrkBM6fbeHdwK?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="80" 
+                  frameBorder="0" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" >
+                </iframe>
+              </div>
+            </div>
+          )}
+
         </div>
-      </main>
+
+        {/* Bottom Small Card (Hint) */}
+        <div className="flex flex-col items-center justify-center relative rounded-xl p-4 bg-white/80 [box-shadow:var(--shadow)]">
+          <div className="text-sm text-gray-600 italic">
+            <span className="text-pink-500 font-semibold">Please enter the 6-digits password into my heart...</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
