@@ -6,11 +6,30 @@ import Link from "next/link";
 export default function PicturesPage() {
 
   const myImages = [
-    { src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop', alt: 'Abstract art' },
-    { src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop', alt: 'Modern sculpture' },
-    { src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop', alt: 'Digital artwork' },
-    { src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop', alt: 'Contemporary art' },
-    // Add more...
+    { src: '/photos/jarylle (1).jpg', alt: 'Jarylle (1)' },
+    { src: '/photos/jarylle (2).jpg', alt: 'Jarylle (2)' },
+    { src: '/photos/jarylle (3).jpg', alt: 'Jarylle (3)' },
+    { src: '/photos/jarylle (4).jpg', alt: 'Jarylle (4)' },
+    { src: '/photos/jarylle (5).jpg', alt: 'Jarylle (5)' },
+    { src: '/photos/jarylle (6).jpg', alt: 'Jarylle (6)' },
+    { src: '/photos/jarylle (7).jpg', alt: 'Jarylle (7)' },
+    { src: '/photos/jarylle (8).jpg', alt: 'Jarylle (8)' },
+    { src: '/photos/jarylle (9).jpg', alt: 'Jarylle (9)' },
+    { src: '/photos/jarylle (10).jpg', alt: 'Jarylle (10)' },
+    { src: '/photos/jarylle (11).jpg', alt: 'Jarylle (11)' },
+    { src: '/photos/jarylle (12).jpg', alt: 'Jarylle (12)' },
+    { src: '/photos/jarylle (13).jpg', alt: 'Jarylle (13)' },
+    { src: '/photos/jarylle (14).jpg', alt: 'Jarylle (14)' },
+    { src: '/photos/jarylle (15).jpg', alt: 'Jarylle (15)' },
+    { src: '/photos/jarylle (16).jpg', alt: 'Jarylle (16)' },
+    { src: '/photos/jarylle (17).jpg', alt: 'Jarylle (17)' },
+    { src: '/photos/jarylle (18).jpg', alt: 'Jarylle (18)' },
+    { src: '/photos/jarylle (19).jpg', alt: 'Jarylle (19)' },
+    { src: '/photos/jarylle (20).jpg', alt: 'Jarylle (20)' },
+    { src: '/photos/jarylle (21).jpg', alt: 'Jarylle (21)' },
+    { src: '/photos/jarylle (22).jpg', alt: 'Jarylle (22)' },
+    { src: '/photos/jarylle (23).jpg', alt: 'Jarylle (23)' },
+    { src: '/photos/jarylle (24).jpg', alt: 'Jarylle (24)' },
   ];
 
   return (
