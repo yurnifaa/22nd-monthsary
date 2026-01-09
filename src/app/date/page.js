@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { MdAccessTime, MdOutlineChurch, MdRestaurant, MdStar } from "react-icons/md";
+import { MdAccessTime, MdOutlineChurch, MdPsychology } from "react-icons/md";
+import { CiBowlNoodles } from "react-icons/ci";
+import { FaRegSadCry } from "react-icons/fa";
+import { IoFastFoodOutline } from "react-icons/io5";
 
 const events = [
   { 
@@ -18,41 +21,27 @@ const events = [
     time: "01:00 PM", 
     title: "Lunch Break First!",
     activity: "Eat at a near by restaurant in PICC to recharge.", 
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    )
+    icon: <IoFastFoodOutline className="h-6 w-6 text-white" />
+
+    
   },
     { 
     time: "03:00 PM", 
     title: "The Mind Museum",
     activity: "Enjoy the wonders of science and technology together in BGC.", 
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    )
+    icon: <MdPsychology className="h-6 w-6 text-white" />
   },
     { 
     time: "06:00 PM", 
     title: "Marugame Udon",
     activity: "Before going home, let's share a warm bowl of udon!", 
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    )
+    icon: <CiBowlNoodles className="h-6 w-6 text-white" />
   },
       { 
     time: "07:00 PM", 
     title: "The End!",
     activity: "We head back home with our hearts full and happy hehe xd.", 
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    )
+    icon: <FaRegSadCry className="h-6 w-6 text-white" />
   },
 ];
 
@@ -60,7 +49,7 @@ export default function DateTimeline() {
   return (
     <main className="min-h-screen w-full bg-transparent py-6 flex flex-col justify-center sm:py-12 font-serif">
       
-      <div className="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
+      <div className="py-3 sm:max-w-5xl sm:mx-auto w-full px-2 sm:px-0">
         <h1 className="text-[80px] font-bold text-center text-white font-tangerine mb-12 text-shadow-lg">
           Sunday, January 11, 2026
         </h1>
