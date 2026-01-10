@@ -32,13 +32,13 @@ export default function Letter() {
         {/* The Paper */}
         <div className="paper-container relative w-full max-w-lg bg-white p-8 md:p-12 text-gray-800 leading-relaxed shadow-xl">
           <div className="absolute top-0 bottom-0 left-12 border-l border-red-300"></div>
-          <div className="relative z-10 pl-3 font-tangerine md:text-[30px] leading-[1.8rem] font-bold">
+          <div className="relative z-10 pl-3 font-tangerine md:text-[30px] leading-[1.8rem] font-semibold">
             <p>
-              My Dearest,
+              My Dearest Karylle,
               <br/><br/>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris risus, lobortis a neque aliquet, ornare rutrum purus. Integer hendrerit ac est non cursus.
+              A year and two with you and i feel as thought our relationship has not aged a bit. Waking up just feels like icons’m falling in love with you all over again. No combination of words in any type of language can ever define the love i have for you. I wish to share the rest of my living months with you; all of my mornings, my afternoons, and my evenings with you. I hope you know how much I love you and how much impact you have made in my life. 
               <br/><br/>
-              I love you more than words can write.
+              I love you inevitably, irrevocably, and most of all, unconditionally.
               <br/><br/>
               Forever Yours,<br/>
               Jana

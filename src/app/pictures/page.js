@@ -32,7 +32,7 @@ export default function PicturesPage() {
     { src: '/photos/jarylle (24).jpg', alt: 'Jarylle (24)' },
   ];
 
-  return (
+return (
     <main className="relative w-full h-screen bg-black overflow-hidden">
       
       <DomeGallery 
@@ -41,10 +41,16 @@ export default function PicturesPage() {
         grayscale={false}
       />
 
+      <div className="absolute top-0 left-0 w-full z-50 pointer-events-none pt-8 md:pt-12">
+        <h1 className="text-[60px] md:text-[80px] font-bold text-center text-white font-tangerine text-shadow-lg drop-shadow-md leading-none">
+          My Favs throughout the Years
+        </h1>
+      </div>
+
       <div className="absolute bottom-0 left-0 w-full z-50 pointer-events-none">
         <div className="bg-linear-to-t from-black/90 to-transparent w-full pt-20 pb-10 flex flex-col items-center justify-end pointer-events-auto">
           <hr className="border-pink-300/30 mb-6 w-3/4 max-w-2xl mx-auto" />  
-          <Link href="/home" className="text-white text-[35px] font-tangerine hover:scale-110 transition-transform text-shadow-lg cursor-pointer">
+          <Link href="/home" className="text-white text-3xl md:text-[35px] font-tangerine hover:scale-110 transition-transform text-shadow-lg cursor-pointer">
             ← Back to Home
           </Link>
         </div>
