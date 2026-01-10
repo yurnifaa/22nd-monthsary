@@ -4,8 +4,8 @@ This is a personal portfolio built to showcase my journey as a developer into Fu
 
 ![Portfolio Screenshot](./public/webpage_screenshot.png)
 
-## 🔴 Live Demo ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/janadelrosario?style=plastic)
-🔗 [forkarylle.vercel.app](https://janadelrosario.vercel.app)
+## 🔴 Live Demo [![Netlify Status](https://api.netlify.com/api/v1/badges/2e82e3bc-44a7-4a6e-95c8-7ec019ce64a3/deploy-status)](https://app.netlify.com/projects/forkarylle/deploys)
+🔗 [forkarylle.netlify.app](https://forkarylle.netlify.app)
 
 This website is deployed using Netlify, developed with JavaScript on the Next.js framework, and styled with React and Tailwind CSS. Building this allowed me to bridge the gap between creative design and complex fornt-end elements.
 
