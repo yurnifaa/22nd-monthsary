@@ -1,6 +1,6 @@
 # 👋 22nd Monthsary w/ Her | Web-App
 
-This is a personal portfolio built to showcase my journey as a developer into Full-Stack Development alongside my Computer Science studies as a 3rd year college student. This portfolio was designed to be more than just a resume; it's a demonstration of my technical capabilities when it comes to different technology stacks.
+This is a heartfelt website-application I designed for my girlfriend, karylle, as a gift for our 22nd Monthsary. I've implemented components such as a gallery of our pictures, a short but sweet letter, and a timeline UI of our date.
 
 ![Portfolio Screenshot](./public/webpage_screenshot.png)
 
