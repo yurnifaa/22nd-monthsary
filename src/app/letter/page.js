@@ -3,13 +3,13 @@ import Link from "next/link";
 import { useState, useRef } from "react";
 
 export default function Letter() {
-  // STATE: Track if music is playing
+  // Track if music is playing
   const [isPlaying, setIsPlaying] = useState(false);
   
-  // REF: Reference to the audio element
+  // Reference to the audio element
   const audioRef = useRef(null);
 
-  // FUNCTION: Play/Pause when vinyl is clicked
+  // Play/Pause when vinyl is clicked
   const togglePlay = () => {
     if (!audioRef.current) return;
 

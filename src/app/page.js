@@ -8,7 +8,6 @@ export default function PinLock() {
   const inputRefs = useRef([]);
   const router = useRouter();
 
-  // Focus the first input on load
   useEffect(() => {
     if (inputRefs.current[0]) {
       inputRefs.current[0].focus();
@@ -16,24 +15,20 @@ export default function PinLock() {
   }, []);
 
   const handleChange = (index, value) => {
-    // Only allow numbers
     if (!/^\d*$/.test(value)) return;
 
     const newOtp = [...otp];
-    newOtp[index] = value.substring(value.length - 1); // Only take the last char
+    newOtp[index] = value.substring(value.length - 1);
     setOtp(newOtp);
 
-    // Move to next input if value is entered
     if (value && index < 5 && inputRefs.current[index + 1]) {
       inputRefs.current[index + 1].focus();
     }
     
-    // Reset error when typing
     setError(false);
   };
 
   const handleKeyDown = (index, e) => {
-    // Move to previous input on backspace if current is empty
     if (e.key === "Backspace" && !otp[index] && index > 0 && inputRefs.current[index - 1]) {
       inputRefs.current[index - 1].focus();
     }
