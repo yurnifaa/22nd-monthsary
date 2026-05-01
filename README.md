@@ -2,8 +2,6 @@
 
 This is a heartfelt website-application I designed for my girlfriend, karylle, as a gift for our 22nd Monthsary. I've implemented components such as a gallery of our pictures, a short but sweet letter, and a timeline UI of our date.
 
-![Portfolio Screenshot](./public/webpage_screenshot.png)
-
 ## 🔴 Live Demo [![Netlify Status](https://api.netlify.com/api/v1/badges/2e82e3bc-44a7-4a6e-95c8-7ec019ce64a3/deploy-status)](https://app.netlify.com/projects/forkarylle/deploys)
 🔗 [forkarylle.netlify.app](https://forkarylle.netlify.app)
 
