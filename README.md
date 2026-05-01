@@ -1,4 +1,4 @@
-# 👋 22nd Monthsary w/ Her | Web-App
+# 👋 22nd Monthsary w/ Her
 
 This is a heartfelt website-application I designed for my girlfriend, karylle, as a gift for our 22nd Monthsary. I've implemented components such as a gallery of our pictures, a short but sweet letter, and a timeline UI of our date.
 
