@@ -51,9 +51,9 @@ export default function PinLock() {
       <div className="[--shadow:rgba(60,64,67,0.3)_0_1px_2px_0,rgba(60,64,67,0.15)_0_2px_6px_2px] w-full max-w-md space-y-4">
         <div className="flex flex-col items-center justify-center relative rounded-xl p-8 bg-white/90 backdrop-blur-sm [box-shadow:var(--shadow)] overflow-hidden border border-white">
           
-          <h6 className="text-3xl font-bold text-gray-800 mb-2">Baby Verification xd</h6>
+          <h6 className="text-3xl font-bold text-gray-800 mb-2">Karylle Verification xd</h6>
           <p className="text-zinc-500 text-sm text-center mb-6 italic">
-            Enter the date our story began (MMDDYY)
+            Enter the date our story began (MM/DD/YY)
           </p>
 
           {/* 6-Digit Grid */}
