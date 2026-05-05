@@ -5,6 +5,9 @@ import Link from "next/link";
 
 export default function PicturesPage() {
 
+  // you can add your own photos here, just make sure to put them in the ./public/photos folder and update the src accordingly
+  // i deleted mine because of privacy reasons but you can add as many as you want, 
+  // just follow the same format as the examples below :)
   const myImages = [
     { src: '/photos/jarylle (1).jpg', alt: 'Jarylle (1)' },
     { src: '/photos/jarylle (2).jpg', alt: 'Jarylle (2)' },
